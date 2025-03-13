@@ -5,8 +5,9 @@ using UnityEngine;
 public class PositionChampignon : MonoBehaviour
 {
 
-    [SerializeField] private float _positionChampignon;
-
+    [SerializeField] private GameObject _positionChampignon;
+    [SerializeField] private Vector3 _positionA;
+        [SerializeField] private Vector3 _positionB;
     void Start()
     {
 
@@ -14,11 +15,11 @@ public class PositionChampignon : MonoBehaviour
 
         if(randomPosition <= 0.5f)
         {
-
+            _positionChampignon.transform.position = _positionA;
         }
         else
         {
-
+            _positionChampignon.transform.position = _positionB;
         }
     }
 }
