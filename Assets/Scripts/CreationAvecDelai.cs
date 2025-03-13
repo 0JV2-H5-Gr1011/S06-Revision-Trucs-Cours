@@ -10,11 +10,11 @@ public class CreationAvecDelai : MonoBehaviour
     void Start()
     {
         // Éxecute la méthode CreerObjet après un délai de 5s
-        Invoke("CreerObjet", 5f);
+        //Invoke("CreerObjet", 5f);
         // Éxecute la méthode CreerObjet après un délai initiale de 3s et à chaque 1s après
         InvokeRepeating("CreerObjet", 3f, 1f);
         // Cancelle tous les Invoke() actifs
-        CancelInvoke();
+        //CancelInvoke();
     }
 
     void CreerObjet()
@@ -22,7 +22,7 @@ public class CreationAvecDelai : MonoBehaviour
         // Instancie un nouveau objet et garde une référence à lui
         GameObject nouvelleCopie = Instantiate(_objetACreer, _objetPlacemenent.transform.position, _objetPlacemenent.transform.rotation);
 
-        // Prends une référence a le Rigidbody attaché au nouveau objet
+        // Prends une référence Wa le Rigidbody attaché au nouveau objet
         Rigidbody _rbNouvelleCopie = nouvelleCopie.GetComponent<Rigidbody>();
 
         // Applique une force de translation initiale aléatoire
